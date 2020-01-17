@@ -1,7 +1,9 @@
 # build native
-/build/**
+build/**
 # vs code 
 .vscode
+# upload directory
+uploads/**
 
 # Logs
 logs
