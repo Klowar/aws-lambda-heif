@@ -1,12 +1,4 @@
-import routes from './src/routes';
-import cors from 'cors';
-import path from 'path';
+const path = require('path')
 
-const express = require('express');
+const serv = require('./src/server');
 export const APP_ROOT = path.resolve(__dirname);
-
-var app = express();
-
-app.use(cors());
-app.use(routes);
-app.listen(4000);
