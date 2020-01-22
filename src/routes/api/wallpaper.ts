@@ -1,11 +1,12 @@
 import { Router } from 'express';
-import { APP_ROOT } from '../../../index';
+import { APP_ROOT } from '../../..';
+import multer from 'multer';
+import uuidv4 from 'uuid/v4';
 
 const api = require("../../../build/Release/native.node");
-const multer = require('multer');
-const uuidv4 = require('uuid/v4');
 const router = Router();
-const storage_path = 'uploads/';
+const storage_path = 'uploads/raw/';
+
 var storage = multer.diskStorage({
     destination: function (req: any, file: any, cb: Function) {
         cb(null, storage_path)
@@ -23,7 +24,7 @@ router.post('/new', upload.array('wallpaper', 16), function (req, res, next) {
             return;
         }
         const arr: Express.Multer.File[] = req.files;
-        const output_file = `${APP_ROOT}/uploads/${uuidv4()}.heic`
+        const output_file = `${APP_ROOT}/uploads/heic/${uuidv4()}.heic`
         const fnames = [output_file, ...arr.map((elem: Express.Multer.File) => `${APP_ROOT}/${storage_path}${elem.filename}`)];
         console.log("Start file creating ");
         res.json({ files: api.createHeic(fnames) });
