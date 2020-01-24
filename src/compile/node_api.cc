@@ -33,7 +33,7 @@ void Method(const FunctionCallbackInfo<Value> &args)
     argv[0] = "heif-enc-node";
     for (int i = 0; i < leng; i++)
     {
-        Local<String> str = arr->Get(i).As<String>();
+        Local<String> str = arr->Get(args.GetIsolate()->GetCurrentContext(), i).ToLocalChecked().As<String>();
         argv[i + 1] = new char[str->Length()];
         str->WriteUtf8(args.GetIsolate(), argv[i + 1]);
     }
@@ -44,7 +44,7 @@ void Method(const FunctionCallbackInfo<Value> &args)
         int status = 0;
         wait(&status);
         args.GetReturnValue()
-            .Set(arr->Get(0));
+            .Set(arr->Get(args.GetIsolate()->GetCurrentContext(), 0).ToLocalChecked().As<String>());
     }
     else
     {
