@@ -3,19 +3,22 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 interface UserInterface {
-    googleId: BigInteger,
-    googleToken: String,
+    googleId: String,
+    accessToken: String,
     images: [String],
     profile: {
-        email: String
+        emails: [String],
+        name: String
     }
 }
 
 const UserSchema = new Schema({
-    googleToken: String,
+    googleId: String,
+    accessToken: String,
     images: [String],
     profile: {
-        email: String
+        emails: [String],
+        name: String
     }
 });
 
