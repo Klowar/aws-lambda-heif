@@ -1,4 +1,5 @@
 import app from './app';
+import { watchForClean } from './util/cleaner/TimeCleaner';
 
 
 const server = app.listen(app.get("port"), () => {
@@ -7,6 +8,8 @@ const server = app.listen(app.get("port"), () => {
         app.get("port"),
         app.get("env")
     );
+    watchForClean({ path: './uploads/raw', size: 1600 });
+
     console.log("  Press CTRL-C to stop\n");
 });
 
