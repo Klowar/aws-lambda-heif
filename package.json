@@ -41,6 +41,7 @@
     "node-addon-api": "^2.0.0",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
+    "tedis": "^0.1.10",
     "typescript": "^3.7.4",
     "uuid": "^3.3.3",
     "validator": "^12.1.0"
