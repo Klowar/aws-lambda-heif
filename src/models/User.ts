@@ -6,6 +6,7 @@ interface UserInterface {
     googleId: String,
     accessToken: String,
     images: [String],
+    createBarier: Date,
     profile: {
         emails: [String],
         name: String
@@ -16,6 +17,7 @@ const UserSchema = new Schema({
     googleId: String,
     accessToken: String,
     images: [String],
+    createBarier: Date,
     profile: {
         emails: [String],
         name: String
