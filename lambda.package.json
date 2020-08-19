@@ -1,0 +1,12 @@
+{
+    "name": "wall_serv",
+    "version": "1.0.0",
+    "private": false,
+    "description": "Libheif port to nodejs",
+    "author": "Klowar",
+    "license": "ISC",
+    "dependencies": {
+      "bindings": "^1.5.0"
+    }
+  }
+  
