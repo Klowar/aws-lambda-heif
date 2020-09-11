@@ -10,7 +10,7 @@
                 "./libheif",
                 "./libheif/libheif",
                 "./libheif/examples",
-                "-I/usr/local/include",
+                "-I/opt/nodejs/binding/include"
             ],
             "dependencies": [
                 "<!(node -p \"require('node-addon-api').gyp\")"
