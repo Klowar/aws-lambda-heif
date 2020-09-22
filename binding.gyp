@@ -21,6 +21,7 @@
                 "-lheif",
 		        "-lde265",
                 "-ljpeg",
+                "-lx265",
             ],
             "variables": {
                 "X265_VERSION": "2.7",
