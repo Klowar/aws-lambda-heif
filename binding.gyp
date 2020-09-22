@@ -3,7 +3,8 @@
         {
             "target_name": "native",
             "sources": [
-                "src/compile/node_api.cc"
+                "src/compile/node_api.cc",
+                "libheif/examples/heif_enc.cc"
             ],
             "include_dirs": [
                 "<!@(node -p \"require('node-addon-api').include\")",
@@ -16,9 +17,10 @@
                 "<!(node -p \"require('node-addon-api').gyp\")"
             ],
             "libraries": [
-                "-L/opt/nodejs/binding/lib/libheif.so",
-		"-L/opt/nodejs/binding/lib/libde265.so",
-                "-L/opt/nodejs/binding/lib/libjpeg.so"
+                "-L/opt/nodejs/binding/lib",
+                "-lheif",
+		        "-lde265",
+                "-ljpeg",
             ],
             "variables": {
                 "X265_VERSION": "2.7",
