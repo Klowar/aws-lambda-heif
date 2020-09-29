@@ -17,12 +17,16 @@
                 "<!(node -p \"require('node-addon-api').gyp\")"
             ],
             "libraries": [
-                "-L/opt/nodejs/binding/lib",
                 "-lheif",
 		        "-lde265",
                 "-ljpeg",
                 "-lx265",
             ],
+            "link_settings": {
+                "libraries": [
+                    "-L/opt/nodejs/binding/lib",
+                ]
+            }
             "variables": {
                 "X265_VERSION": "2.7",
                 "LIBDE265_VERSION": "1.0.3"
