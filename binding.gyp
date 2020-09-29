@@ -26,7 +26,7 @@
                 "libraries": [
                     "-L/opt/nodejs/binding/lib",
                 ]
-            }
+            },
             "variables": {
                 "X265_VERSION": "2.7",
                 "LIBDE265_VERSION": "1.0.3"
