@@ -8,17 +8,17 @@
             ],
             "include_dirs": [
                 "<!@(node -p \"require('node-addon-api').include\")",
-                "./libheif",
-                "./libheif/libheif",
                 "./libheif/examples",
-                "-I/opt/nodejs/binding/include"
+                "/opt/nodejs/binding/include",
+		"/opt/nodejs/binding/include/libheif",
+		"/opt/nodejs/binding/include/libde265",
             ],
             "dependencies": [
                 "<!(node -p \"require('node-addon-api').gyp\")"
             ],
             "libraries": [
                 "-lheif",
-		        "-lde265",
+	        "-lde265",
                 "-ljpeg",
                 "-lx265",
             ],
