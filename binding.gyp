@@ -4,11 +4,12 @@
             "target_name": "native",
             "sources": [
                 "src/compile/node_api.cc",
-                "libheif/examples/heif_enc.cc"
+		"libheif/examples/heif_enc.cc"
             ],
             "include_dirs": [
                 "<!@(node -p \"require('node-addon-api').include\")",
-                "./libheif/examples",
+		"libheif",
+		"libheif/examples",
                 "/opt/nodejs/binding/include",
 		"/opt/nodejs/binding/include/libheif",
 		"/opt/nodejs/binding/include/libde265",
@@ -19,7 +20,7 @@
             "libraries": [
                 "-lheif",
 	        "-lde265",
-                "-ljpeg",
+		"-ljpeg",
                 "-lx265",
             ],
             "link_settings": {
@@ -29,11 +30,11 @@
             },
             "variables": {
                 "X265_VERSION": "2.7",
-                "LIBDE265_VERSION": "1.0.3"
+                "LIBDE265_VERSION": "1.0.3",
             },
             "cflags!": ["-fno-exceptions", "-no-pie", "-v", "--no-fail-fast"],
             "cflags_cc!": ["-fno-exceptions", "-no-pie"],
-            "defines": ["NAPI_CPP_EXCEPTIONS"]
+            "defines": ["NAPI_CPP_EXCEPTIONS", "HAVE_CONFIG_H"]
         }
     ]
 }
