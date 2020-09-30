@@ -1,23 +1,23 @@
 const test = require('bindings')('native.node')
 
 const files = [
-    "/Users/klowar/Desktop/jpgs/out.heic",
-    "/Users/klowar/Desktop/jpgs/1.jpg",
-    "/Users/klowar/Desktop/jpgs/2.jpg",
-    "/Users/klowar/Desktop/jpgs/3.jpg",
-    "/Users/klowar/Desktop/jpgs/4.jpg",
-    "/Users/klowar/Desktop/jpgs/5.jpg",
-    "/Users/klowar/Desktop/jpgs/6.jpg",
-    "/Users/klowar/Desktop/jpgs/7.jpg",
-    "/Users/klowar/Desktop/jpgs/8.jpg",
-    "/Users/klowar/Desktop/jpgs/9.jpg",
-    "/Users/klowar/Desktop/jpgs/10.jpg",
-    "/Users/klowar/Desktop/jpgs/11.jpg",
-    "/Users/klowar/Desktop/jpgs/12.jpg",
-    "/Users/klowar/Desktop/jpgs/13.jpg",
-    "/Users/klowar/Desktop/jpgs/14.jpg",
-    "/Users/klowar/Desktop/jpgs/15.jpg",
-    "/Users/klowar/Desktop/jpgs/16.jpg"
+    "./images/out.heic",
+    "./images/1.jpg",
+    "./images/2.jpg",
+    "./images/3.jpg",
+    "./images/4.jpg",
+    "./images/5.jpg",
+    "./images/6.jpg",
+    "./images/7.jpg",
+    "./images/8.jpg",
+    "./images/9.jpg",
+    "./images/10.jpg",
+    "./images/11.jpg",
+    "./images/12.jpg",
+    "./images/13.jpg",
+    "./images/14.jpg",
+    "./images/15.jpg",
+    "./images/16.jpg"
 ]
 console.log(
     test.createHeic(files)
